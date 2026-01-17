@@ -1,5 +1,7 @@
 import math
 
+cards_per_pack = 5
+
 def probability_calculator():
     print("-- Pokemon TCG Drop Chance Calculator --")
     print("Type 'exit' at any prompt to quit.")
@@ -19,9 +21,7 @@ def probability_calculator():
             if packs_input.lower() == 'exit': break
             packs = int(packs_input)
             
-            cards_per_pack_input = input("Enter cards per pack: ")
-            if cards_per_pack_input.lower() == 'exit': break
-            cards_per_pack = int(cards_per_pack_input)
+
             
             # Calculations
             percentage_specific_card = (rarity_rate / 100) / pool_size
@@ -48,3 +48,4 @@ def probability_calculator():
 
 if __name__ == "__main__":
     probability_calculator()
+
